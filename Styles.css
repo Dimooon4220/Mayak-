@@ -1,0 +1,160 @@
+/* === Базові стилі === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f5f7ff;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* === Хедер === */
+header {
+    background: #00782c; /* темно-синій */
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+/* === Меню === */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #ffd700; /* жовтий */
+}
+
+/* === Головний банер === */
+.hero {
+    background: url("Photo/Mayak.png") center/contain no-repeat;
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #00782c;
+    color: rgb(0, 0, 0);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* === Про клуб === */
+.about, .teams, .contact {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.about h2, .teams h2, .contact h2 {
+    font-size: 32px;
+    color: #0a1a4a;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* === Команди === */
+.team {
+    background: white;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.team:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.team img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* === Контакти === */
+.contact p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.contact a {
+    color: #0a1a4a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: #ffd700;
+}
+
+/* === Футер === */
+footer {
+    background: #0a1a4a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* === Адаптивність === */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        background: #0a1a4a;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
